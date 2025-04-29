@@ -1,0 +1,14 @@
+name: my first workflow
+on:
+  workflow_dispatch:
+jobs:
+  test_project:
+    runs-on: ubuntu-latest
+
+  steps:
+    - name: checkout
+      uses: actions/checkout@v4
+
+    - name: run echo commands
+      run: ls -ltra; pwd; whoami;
+  
